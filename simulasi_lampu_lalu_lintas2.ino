@@ -34,6 +34,11 @@ void loop() {
   setTrafficLights(redLed1, yellowLed1, greenLed1, LOW, LOW, HIGH);
   setTrafficLights(redLed2, yellowLed2, greenLed2, HIGH, LOW, LOW);
   delay(3000); // Tunggu 3 detik
+
+  // Lampu kuning menyala, lampu lainnya mati
+  setTrafficLights(redLed1, yellowLed1, greenLed1, LOW, HIGH, LOW);
+  setTrafficLights(redLed2, yellowLed2, greenLed2, LOW, HIGH, LOW);
+  delay(1000); // Tunggu 1 detik (biasanya lampu kuning lebih singkat)
 }
 
 // Fungsi untuk mengatur lampu lalu lintas
